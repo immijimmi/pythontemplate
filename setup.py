@@ -13,9 +13,9 @@ setup(
     description="<package description>",
     long_description_content_type="text/markdown",
     long_description=long_description,
-    author="immijimmi",
-    author_email="imranhamid99@msn.com",
-    url="https://github.com/immijimmi/<package name>",
+    author="<author username/name>",
+    author_email="<author email>",
+    url="https://github.com/<author username>/<package name>",
     download_url="",
     keywords=[  #####
             
