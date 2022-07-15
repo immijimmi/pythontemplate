@@ -17,7 +17,6 @@
     - `to-do.txt`
   - Files which facilitate running your project as an application:
     - `\(packagename)\__main__.py`
-    - `\tools\installrequirements.bat`
     - `\tools\start-venv.bat`
     - `requirements.txt`
     - `start.bat`
