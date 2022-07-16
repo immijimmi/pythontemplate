@@ -16,7 +16,7 @@ setup(
     author="<author username/name>",
     author_email="<author email>",
     url="https://github.com/<author username>/<package name>",
-    download_url="",
+    download_url="<tar.gz download link for the package>",
     keywords=[  #####
             
     ],
