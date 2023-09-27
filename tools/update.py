@@ -1,5 +1,5 @@
 from os import chdir
-from subprocess import run, check_output
+from subprocess import run, check_output, PIPE
 from typing import Optional
 
 # Change this value to a valid tag to exclude any tags that are chronologically before it from the available options
@@ -60,30 +60,34 @@ if processed_tags:
 
     selected_tag = prompt_for_tag(set(processed_tags))
     if selected_tag:
-        checkout_output = check_output(f"git checkout {selected_tag}").decode("UTF-8")
-        if "Aborting" in checkout_output:
-            if "Please commit your changes" in checkout_output:
+        checkout_result = run(f"git checkout {selected_tag}", stdout=PIPE, stderr=PIPE, text=True)
+
+        if checkout_result.returncode != 0:  # Unsuccessful
+            output = checkout_result.stderr
+
+            if "Please commit your changes" in output:
                 print(
                     "\nYou've made unsaved changes to this project. "
                     "Are you sure you want to discard them and switch version?"
                 )
                 user_input_discard = input(
                     "Type 'discard' and press Enter to continue, "
-                    "or just press Enter to cancel and leave your files as-is:"
-                )
+                    "or just press Enter to cancel:"
+                ).strip().lower()
 
                 if user_input_discard == "discard":
-                    run(f"git checkout {selected_tag} --force")
+                    run(f"git checkout {selected_tag} --force", stdout=PIPE, stderr=PIPE)
                     print(f"\nSwitched to: {selected_tag}")
+                else:
+                    print("\nProcess aborted. No changes were made.")
 
             else:
                 print("\nAn unknown error has occurred. No changes have been made.")
-                print(f"Full output:\n\n{checkout_output}")
+                print(f"Full output:\n\n{output}")
 
         else:
             print(f"\nSwitched to: {selected_tag}")
-
 else:
     print("No available versions found.")
 
-input("\nEnter to quit:")
+input("\nPress Enter to quit:")
