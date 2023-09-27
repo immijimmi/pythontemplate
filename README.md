@@ -18,6 +18,7 @@
   - Files which facilitate running your project as an application:
     - `\(packagename)\__main__.py`
     - `\tools\start-venv.bat`
+    - `\tools\update.py`
     - `requirements.txt`
     - `start.bat`
   - Files which facilitate publishing your project as a package:
