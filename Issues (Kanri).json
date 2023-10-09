@@ -11,9 +11,9 @@
       "title": "Ideas"
     },
     {
-      "cards": [],
       "id": "kz1t457fiblfbas8s7mxs0pj",
-      "title": "Issues"
+      "title": "Issues",
+      "cards": []
     },
     {
       "cards": [],
@@ -21,9 +21,9 @@
       "title": "Icebox"
     },
     {
-      "cards": [],
       "id": "s3svm1k7ljtf51in0uzs23xi",
-      "title": "Backlog"
+      "title": "Backlog",
+      "cards": []
     },
     {
       "cards": [],
@@ -42,6 +42,6 @@
     }
   ],
   "id": "ik01vu8a0wkvxnd42giodbpf",
-  "lastEdited": "2023-10-09T16:09:12.753Z",
+  "lastEdited": "2023-10-09T17:18:44.360Z",
   "title": "template"
 }
