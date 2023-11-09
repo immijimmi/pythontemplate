@@ -14,10 +14,10 @@
     - `\tools\testcoverage.bat`
     - `.gitignore`
     - `README.md`
-    - `to-do.txt`
+    - `Issues (Kanri).json`
   - Files which facilitate running your project as an application:
     - `\(packagename)\__main__.py`
-    - `\tools\start-venv.bat`
+    - `\tools\start-dev.bat`
     - `\tools\update.py`
     - `requirements.txt`
     - `start.bat`
