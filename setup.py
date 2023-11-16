@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as readme_file:
 setup(
     name="<package name>",
     packages=[
-        "<main package folder>"
+        "<main package folder>"  #####
     ],
     version="0.1.0",
     license="MIT",  #####
