@@ -9,7 +9,7 @@ python -m venv ./venv
 venv\Scripts\python -m pip install -r requirements.txt
 venv\Scripts\python -m pip install pyinstaller~=6.2.0
 
-venv\Scripts\python -m PyInstaller main.py
+venv\Scripts\python -m PyInstaller --onefile main.py
 
 del main.spec
 pause
