@@ -1,6 +1,6 @@
-:: Runs the application with no command line arguments and without displaying a terminal
+:: Runs the application with no command line arguments
 :: Automatically ensures any dependencies are installed before running
 
 pip install -r requirements.txt
 
-start pythonw -m <package folder name>
+start python -m <package folder name>
