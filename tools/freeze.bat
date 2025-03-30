@@ -1,6 +1,6 @@
-:: Freezes the project into a .exe file inside ..dist
-:: Generates a vestigial ..build folder which should be deleted after execution
-:: Installs a venv a the ..venv subfolder if none exists at this location already
+:: Freezes the project into a .exe file inside ..\dist
+:: Generates a vestigial ..\build folder which should be deleted after execution
+:: Installs a venv a the ..\venv subfolder if none exists at this location already
 :: Automatically ensures any dependencies are installed before running
 
 cd ..
